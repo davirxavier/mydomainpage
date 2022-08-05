@@ -4,7 +4,7 @@ steps:
     args:
       - "-c"
       - |
-        gcloud compute ssh fdavirxxxxavier@instance-1 --project=mydiscordbots-355614 --zone=us-east4-c -- 'cd mydomainhomepage && git pull && cp -a ./. /var/www/html'
+        gcloud compute ssh fdavirxxxxavier@instance-1 --project=mydiscordbots-355614 --zone=us-east4-c -- 'cd mydomainhomepage && git pull && sudo cp -a ./. /var/www/html'
 
 options:
   logging: CLOUD_LOGGING_ONLY
