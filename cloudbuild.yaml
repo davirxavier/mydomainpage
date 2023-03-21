@@ -4,7 +4,7 @@ steps:
     args:
       - "-c"
       - |
-        gcloud compute ssh ${_ACCOUNT_NAME} --project=$PROJECT_ID --zone=${_VM_REGION} -- 'cd mydomainhomepage && git pull && sudo cp -a ./. /var/www/html'
+        gcloud compute ssh ${_ACCOUNT_NAME}@${_INSTANCE_NAME} --project=$PROJECT_ID --zone=${_VM_REGION} -- 'cd mydomainhomepage && git pull && sudo cp -a ./. /var/www/html'
 
 options:
   logging: CLOUD_LOGGING_ONLY
